@@ -1,34 +1,55 @@
-# AutoRecon - Python Recon Tool
+# AutoRecon
 
-## Description
-AutoRecon is a Python-based reconnaissance tool for penetration testing. It gathers key information about a target to assist in penetration testing.
+Fast and lightweight reconnaissance tool for port scanning and basic service analysis.
+
+---
+
+## Overview
+
+AutoRecon is a multi-threaded Python-based reconnaissance tool designed to quickly scan common ports, detect running services, and identify potential security weaknesses.
+
+---
 
 ## Features
-- Validate domain/IP input
-- Resolve domain to IP address
-- Reverse DNS lookup
-- Scan open ports (20-1024) using threading for speed
-- Banner grabbing to detect service types and versions
-- Optional report saving
-- Ctrl+C interrupt support
+
+* Fast port scanning (multi-threaded)
+* Target resolution (domain to IP)
+* Service detection for common ports
+* Banner grabbing
+* Basic vulnerability hints
+* Stealth delay using randomized timing
+
+---
 
 ## Usage
-1. Run `autorecon.py`
-2. Enter target domain or IP
-3. Wait for scan to complete
-4. Optionally save the report
+
+```bash
+python main.py -t example.com
+```
+
+---
 
 ## Example Output
-Target: example.com
-IP: 93.184.216.34
-Reverse DNS: example.com
-Open Ports & Banners:
-22 - SSH-2.0-OpenSSH_7.6p1 Ubuntu
-80 - HTTP/1.1 500 Internal Server Error
 
-Report saved: example.com_recon_report.txt
+```
+==== RESULTS ====
+80/tcp - HTTP
+  ↳ HTTP/1.1 200 OK
 
-## Technologies
-- Python
-- Socket module
-- Threading
+22/tcp - SSH
+  [!] Old SSH version
+```
+
+---
+
+## Notes
+
+* Requires Python 3
+* Designed for educational and authorized testing only
+* Do not use without permission
+
+---
+
+## Author
+
+Developed by Abdulrahman Hann
