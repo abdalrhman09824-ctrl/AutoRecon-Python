@@ -24,7 +24,7 @@ AutoRecon is a multi-threaded Python-based reconnaissance tool designed to quick
 ## Usage
 
 ```bash
-python main.py -t example.com
+python auto_recon.py -t example.com
 ```
 
 ---
